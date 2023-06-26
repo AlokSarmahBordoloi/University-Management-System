@@ -1,0 +1,778 @@
+/* Global */
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+/* Header */
+section{
+    padding: 3rem 2rem;
+}
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .top{
+    font-size: 3rem;
+    color: black;
+}
+
+.header .subtitle {
+    font-size: 1.35rem;
+    padding: 0.5rem;
+}
+
+.header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: black;
+}
+
+.header .navbar a:hover{
+    color: red;
+}
+
+#menubtn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: black;
+    display: none;
+}
+
+/* Home */
+.home{
+    padding: 0;
+}
+
+.home .first{
+    background-image: linear-gradient(rgba(90, 90, 90, 0.5),rgba(90, 90, 90, 0.5)),url(images/banner.jpg);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 90vh;
+}
+
+.home .first .content span{
+    display: block;
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.home .first .content h3{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.btn{
+    display: inline-block;
+    background: black;
+    margin-top: 1rem;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+
+}
+
+.btn:hover{
+    background: red;
+}
+
+.btncontainer{
+    display: flex;
+    justify-content: center;
+}
+
+/* About */
+.about{
+    padding: 0;
+}
+.about .first{
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4),rgba(90, 90, 90, 0.4)),url(images/about.jpg);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 54rem;
+}
+
+.about .first .content span{
+    padding-top: 2rem;
+    width: 70vw;
+    display: block;
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.about .first .content h3{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.about .second{
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4),rgba(90, 90, 90, 0.4)),url(images/promise.jpg);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 54rem;
+}
+
+.about .second .content span{
+    padding-top: 2rem;
+    width: 70vw;
+    display: block;
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.about .second .content h3{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+
+/* Footer */
+.footer{
+    background: url(images/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 2rem;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .container .box h3{
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.footer .container .box a{
+    color: white;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.footer .container .box a i{
+    color: greenyellow;
+    padding-right: 0.5rem;
+    transition: .2s linear;
+}
+
+.footer .container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    padding-top: 1.3rem;;
+    border-top: 0.1rem solid white;
+    font-size: 1.5rem;
+}
+
+.footer .credit span {
+    color: yellow;
+}
+
+/* Academics */
+.academics{
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.academics h1{
+    margin-top: 20px;
+    font-size: 5rem;
+}
+
+.academics-row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us{
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.academics-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.academics-col img{
+    width: 35vw;
+}
+.academics-col h1{
+    padding-top: 0;
+    font-size: 3rem;
+}
+.academics-col p{
+    padding: 15px 0 25px;
+    font-size: 1.5rem;
+}
+.red-btn{
+    border: 1px solid red;
+    background: transparent;
+    color: red;
+    font-size: 2rem;
+}
+.red-btn:hover{
+    color: #fff;
+}
+
+/* Facilities */
+.facilities .row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.facilities{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4),rgba(90, 90, 90, 0.4)),url(images/facilities.jpg);
+    background-position: center !important;
+    background-size: cover !important;
+    
+}
+.facilities h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+.facilities p{
+    color: white;
+    font-size: 1.5rem;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: middle;
+}
+.facilities-col img{
+    width: 90%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    color: white;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: middle;
+}
+
+/* Courses */
+.courses .row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.courses{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(90, 90, 90, 0.4),rgba(90, 90, 90, 0.4)),url(images/courses.jpg);
+    background-position: center !important;
+    background-size: cover !important;
+    
+}
+.courses h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+.courses p{
+    color: white;
+    font-size: 1.5rem;
+}
+.courses-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: middle;
+}
+.courses-col img{
+    width: 90%;
+    border-radius: 10px;
+}
+.courses-col p{
+    padding: 0;
+}
+.courses-col h3{
+    color: white;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: middle;
+}
+
+/* Admission */
+.admission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4rem;
+    position: relative;
+    background-color: rgb(167, 220, 235);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.admission .title {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.form {
+    padding: 2rem;
+    position: relative;
+    border-radius: 7px;
+    min-height: 60vh;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.form h3.title{
+    display: flex;
+    padding: 2rem;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.form .fields{
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.form .fields .inputBox{
+    font-size: 1.5rem;
+    width: calc(100%/3 - 15px);
+    align-items: center;
+    padding: 1rem;
+}
+
+.form .fields .inputBox input{
+    font-size: 1.5rem;
+    width: 90%;
+    padding: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+/* Faculty */
+.faculty{
+    padding-top: 0rem;
+    background-color: antiquewhite;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.faculty h3{
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.faculty .administrators ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.faculty .administrators ul li{
+    padding: 2rem;
+}
+.faculty .administrators img{
+    width: 150px;
+}
+.faculty .professors img{
+    width: 150px;
+}
+.faculty .professors ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.faculty .professors ul li{
+    padding: 2rem;
+}
+
+/* Login */
+.login{
+    background: rgb(195, 235, 235);
+    padding: 3rem 3rem;
+}
+.login h1{
+    display: flex;
+    font-size: 5rem;
+    font-weight: 700;
+    padding-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+.login .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    border-radius: 7px;
+    background: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.login img{
+    width: 250px;
+}
+.login .teachers{
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.login .new{
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    margin: 0rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.login .students{
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.login .inputBox{
+    font-size: 1.5rem;
+    width: 90%;
+    padding: 0.5rem;
+}
+.login .inputBox input{
+    font-size: 1.5rem;
+    width: 110%;
+    padding: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.login h2{
+    display: flex;
+    font-size: 3rem;
+    font-weight: 700;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+/* Output New */
+.newstudent{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: antiquewhite;
+    align-items: center;
+    justify-content: center;
+}
+.newstudent .output{
+    background: white;
+    width: 70%;
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.details {
+    padding: 1.5rem 1rem;
+}
+
+.details h2{
+    font-size: 4rem;
+}
+
+/* Update New */
+.update {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    background-color: antiquewhite;
+}
+.update input {
+    font-size: 2rem;
+    width: 98%;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+/* Output Teachers */
+.bcamarksheet{
+    background: antiquewhite;
+}
+.bcamarksheet h1{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.bcamarksheet .table{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.bcamarksheet .table tr td{
+    border: black solid 1px;
+    padding: 0.5rem;
+    width: 90%;
+    white-space: nowrap;
+    font-size: 1.5rem;
+
+}
+/* Media Queries */
+@media (max-width:1200px){
+
+    section{
+        padding: 3rem 5%;
+    }
+
+    .btn{
+        font-size: 4vw;
+        padding: 1vw 3vw;
+        cursor: pointer;
+    
+    }
+
+    .about .first .content h3{
+        font-size: 10vw;
+    }
+    
+    .about .second .content h3{
+        font-size: 10vw;
+    }
+
+    .academics h1{
+        font-size: 8vw;
+    }
+    .academics .about-us h1{
+        font-size: 6vw;
+    }
+    .academics .about-us .academics-row {
+        flex-direction: column;
+    }
+
+    .facilities h1 {
+        font-size: 8vw;
+    }
+
+    .courses h1 {
+        font-size: 8vw;
+    }
+
+    .academics-col img{
+        width: 100%;
+    }
+
+    .form .fields{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form .fields .inputBox{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .login .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .login h1{
+        text-align: center;
+    }
+    .login .new{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0rem;
+        width: 90%;
+    }
+    .login .teachers{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .login .students{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .login img{
+        width: 50vw;
+    }
+}
+
+@media (max-width:900px){
+
+    html {
+        font-size: 80%;
+    }
+
+    section{
+        padding: 3rem 5%;
+    }
+
+    .header .top{
+        font-size: 7vw;
+    }
+
+    .home .first .content h3{
+        font-size: 10vw;
+    }
+
+    .facilities .row{
+        flex-direction: column;
+    }
+
+    .courses .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px){
+
+    #menubtn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menubtn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    html {
+        font-size: 70%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: black;
+        padding: 0rem;
+        transition: 0.2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:450px){
+
+    html {
+        font-size: 60%;
+    }
+
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+
